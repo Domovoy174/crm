@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script defer src="./js/inputmask.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+
+  <script defer src="./js/main.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <title>CRM</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="header__container container-fluid">
+      <img class="header__logo" src="./img/logo.jpg" id="logo" alt="Логотип">
+      <input class="header__search" type="search" name="search" id="search" placeholder="Введите запрос">
+      <div class="autocomplete" id="autocomplete" tabindex="-1"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main__container" id="container">
+      <div class="container-fluid data">
+        <h1 class="title">
+          Клиенты
+        </h1>
+        <div class="row-data data__client data__client--bg">
+          <div class="data__title data__col-id">
+            <span class="data__text data__text--btn" id="title__id">
+              ID
+            </span>
+          </div>
+          <div class="data__title data__col-fullName">
+            <span class="data__text data__text--btn" id="title__fullName">
+              Фамилия Имя Отчество
+            </span>
+          </div>
+          <div class="data__title data__col-wrap-date">
+            <span class="data__text data__text--btn" id="title__create-date">
+              Дата и время создания
+            </span>
+          </div>
+          <div class="data__title data__col-wrap-update">
+            <span class="data__text data__text--btn" id="title__update-date">
+              Последнее изменение
+            </span>
+          </div>
+          <div class="data__title data__col-contact-wrapper">
+            <span class="data__text">
+              Контакты
+            </span>
+          </div>
+          <div class="data__title data__col-action">
+            <span class="data__text">
+              Действия
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid table-users table-users__hero data">
+      </div>
+      <div class="container-fluid container-fluid--center">
+        <button type="button" id="addUser" class="btn btn-add-client">
+          Добавить клиента
+        </button>
+      </div>
+    </div>
+  </main>
+  <div class="fon" id="myBackground">
+    <div class="dialog" id="myDialog" tabindex="-1"></div>
+  </div>
+  <div class="waiting waiting-action" id="waiting" tabindex="-1">
+    <span class="spinner-border waiting__spinner text-primary" role="status" id="waiting__spinner"></span>
+  </div>
+
+</body>
+
+</html>
